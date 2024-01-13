@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miejscowość</title>
+    <link rel="stylesheet" href="styl.css">
+    <link rel="shortcut icon" href="img/icon.png">
+
+</head>
+<body>
+
+    <header>
+        <img src="img/sum.jpg" alt="sum afrykański">
+        </header>
+            <nav>
+                <ul>
+                    <li><a href="index.html" target="_blank">Główna</a></li>
+                    <li><a href="miejscowosc.html" target="_blank">Miejscowość</a></li>
+                    <li><a href="kontakt.html" target="_blank">Kontakt</a></li>
+                </ul>
+            </nav>
+            <div class="iframe">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41467.926565347196!2d20.00256109053243!3d49.4893159400972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4715e4960845d6d3%3A0xef2afa91a89443c5!2sNowy%20Targ!5e0!3m2!1spl!2spl!4v1704720610413!5m2!1spl!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        <div class="img">
+            <img src="img/krajobrazNT.jpg" alt="krajobraz Nowego Targu">
+            <img src="img/mck.jpg" alt="MCK">
+            <img src="img/ratusz.jpg" alt="Ratusz NT">
+        </div>
+        <footer>
+            <p id="czas"></p>
+        <script>
+let teraz = new Date();
+let rok = teraz.getFullYear();
+let miesiac = teraz.getMonth() + 1; 
+let dzienMiesiac = teraz.getDate();
+let godzina = teraz.getHours();
+let minuty = teraz.getMinutes();
+
+if (godzina < 10) godzina = '0' + godzina;
+if (minuty < 10) minuty = '0' + minuty;
+if (dzienMiesiac < 10) dzienMiesiac = '0' + dzienMiesiac;
+if (miesiac < 10) miesiac = '0' + miesiac;
+
+let data = `${dzienMiesiac}-${miesiac}-${rok}`;
+let godz = `${godzina}:${minuty}`;
+document.getElementById("czas").innerHTML = godz +"  "+data;
+
+
+        setInterval(()=>{
+            let teraz = new Date();
+let rok = teraz.getFullYear();
+let miesiac = teraz.getMonth() + 1; 
+let dzienMiesiac = teraz.getDate();
+let godzina = teraz.getHours();
+let minuty = teraz.getMinutes();
+
+if (godzina < 10) godzina = '0' + godzina;
+if (minuty < 10) minuty = '0' + minuty;
+if (dzienMiesiac < 10) dzienMiesiac = '0' + dzienMiesiac;
+if (miesiac < 10) miesiac = '0' + miesiac;
+
+let data = `${dzienMiesiac}-${miesiac}-${rok}`;
+let godz = `${godzina}:${minuty}`;
+document.getElementById("czas").innerHTML = godz +"  "+data;
+
+        }, 1000);
+
+        </script>
+            <p>zzych22@zs1.nowotarski.edu.pl</p>
+        </footer>
+    
+</body>
+</html>

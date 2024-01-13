@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Główna</title>
+    <link rel="stylesheet" href="styl.css">
+    <link rel="shortcut icon" href="img/icon.png">
+</head>
+<body>
+    <header>
+<!-- hosting ma byc :( -->
+        <img src="img/sum.jpg" alt="sum afrykański">
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" target="_blank">Główna</a></li>
+            <li><a href="miejscowosc.html" target="_blank">Miejscowość</a></li>
+            <li><a href="kontakt.html" target="_blank">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <div class="ryby">
+        <img src="img/szczupak.jpg" alt="Szczupak">
+        <img src="img/sumPospolity.jpg" alt="Sum pospolity">
+    </div>
+    
+    <div class = "main">
+
+            <p class="podhale">
+                <a href="https://pl.wikipedia.org/wiki/Podhale" target="_blank">Podhale,</a>
+                to malowniczy region leżący w polskich Tatrach, który obfituje w liczne rzeki, strumienie, i jeziora, co sprawia, że jest również domem dla różnorodnych gatunków ryb. Ryby zamieszkujące te wody są zazwyczaj gatunkami charakterystycznymi dla górskich strumieni i jezior.
+                Oto niektóre z ryb, które można spotkać na Podhalu:
+            </p>
+
+            <ul>
+                <li>
+                    <p>
+                        Pstrąg: To jedna z najbardziej popularnych ryb w górskich potokach. Pstrągi podhalańskie są znane ze swojego smacznego mięsa i są chętnie łowione przez wędkarzy.
+                        <br>
+                    </p>
+                    <div class="cen">
+                        <img src="img/pstrag.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <p>
+                        Lipień: Gatunek ryby z rodziny łososiowatych, występujący również w górskich rzekach Podhala. Lipień jest ceniony przez wędkarzy za walkę na wędce.
+                        <br>
+                    </p>
+                    <div class="cen">
+                        <img src="img/lipien.jpg" alt="">
+                    </div>
+                </li>
+            </ul>
+        
+        <p class="podhale">
+            Jeziorne ryby: Na Podhalu znajduje się kilka malowniczych jezior, które są domem dla różnych gatunków ryb, takich jak sielawa czy troć. Jeziora te są również atrakcyjne dla miłośników wędkarstwa.
+            
+        </p>
+        <p class="podhale">
+            Podhale przyciąga wędkarzy nie tylko ze względu na piękne krajobrazy, ale także ze względu na różnorodność ryb. Wiele rzek i strumieni na Podhalu jest dostępnych dla wędkarzy, oferując możliwość połowu różnych gatunków.
+
+            Region ten stanowi nie tylko atrakcyjny obszar turystyczny, ale także ciekawe miejsce dla miłośników wędkarstwa, pragnących doświadczyć uroku górskich wód i złowić charakterystyczne dla tego regionu gatunki ryb.
+        </p>
+    </div>
+    <div class="ryby">
+        <img src="img/polskiSum.webp" alt="Sum">
+        <img src="img/sumRekini.jpg" alt="Sum rekini">
+    </div>
+
+    <footer>
+        <p id="czas"></p>
+        <script>
+let teraz = new Date();
+let rok = teraz.getFullYear();
+let miesiac = teraz.getMonth() + 1; 
+let dzienMiesiac = teraz.getDate();
+let godzina = teraz.getHours();
+let minuty = teraz.getMinutes();
+
+if (godzina < 10) godzina = '0' + godzina;
+if (minuty < 10) minuty = '0' + minuty;
+if (dzienMiesiac < 10) dzienMiesiac = '0' + dzienMiesiac;
+if (miesiac < 10) miesiac = '0' + miesiac;
+
+let data = `${dzienMiesiac}-${miesiac}-${rok}`;
+let godz = `${godzina}:${minuty}`;
+document.getElementById("czas").innerHTML = godz +"  "+data;
+
+        setInterval(()=>{
+            let teraz = new Date();
+let rok = teraz.getFullYear();
+let miesiac = teraz.getMonth() + 1; 
+let dzienMiesiac = teraz.getDate();
+let godzina = teraz.getHours();
+let minuty = teraz.getMinutes();
+
+if (godzina < 10) godzina = '0' + godzina;
+if (minuty < 10) minuty = '0' + minuty;
+if (dzienMiesiac < 10) dzienMiesiac = '0' + dzienMiesiac;
+if (miesiac < 10) miesiac = '0' + miesiac;
+
+let data = `${dzienMiesiac}-${miesiac}-${rok}`;
+let godz = `${godzina}:${minuty}`;
+document.getElementById("czas").innerHTML = godz +"  "+data;
+        }, 1000);
+        </script>
+        <p>zzych22@zs1.nowotarski.edu.pl</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,239 @@
+:root{
+    --font-size: 19px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-size: var(--font-size);
+}
+
+html{
+    width: 100%;
+    height: 100vh;
+}
+
+header img{
+    width: 25vw;
+}
+
+.profil img{
+    width:33vw;
+    height: auto;
+}
+
+body{
+    background-color: rgb(104, 181, 226);
+}
+
+ header{
+    justify-content: center;
+    display: flex;
+    background-color: #7FC4FB;
+}
+
+footer{
+    width: 100vw;
+    background-color: #7FC4FB;
+    position: fixed;
+    bottom: 0;
+    padding: 3.5px 4.5px;
+    justify-content: center;
+    box-sizing: border-box;
+    font-weight: bold;
+    text-align: start;
+}
+
+body > *:nth-last-child(2){
+    margin-bottom: 50px;
+}
+
+nav{
+    background-color: rgb(46, 158, 223);
+}
+
+ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+li{
+    width: fit-content;
+    float: right;
+    list-style-type: none;
+    padding: 17px 0px;
+}
+
+pre{
+    font-family: inherit;
+}
+
+.iframe{
+    display: flex;
+    justify-content: center;
+}
+
+.img{
+    padding:  5px 10px;
+    text-align: center;
+}
+
+.img img {
+    clear: both;
+    width: 80vw;
+}
+
+.main img:not(li img) {
+    width: 25%;
+    float: right;
+}
+
+.ryby{
+    margin: 8px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.ryby img{
+    height: 27vh;
+}
+
+li p {
+    float: left;
+}
+.troc{
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+.profil{
+    display: flex;
+}
+
+button{
+    margin-bottom: 12px;
+}
+
+.podhale{
+    text-align: center;
+    padding: 7px 250px;
+}
+
+li:not(nav li){
+    background-color: #2E9EDF ;
+    padding: 30px 80px;
+}
+
+li img {
+    width: 50%;
+}
+
+.cen{
+    text-align: center;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-around;
+}
+
+    @media only screen and (max-width:1210px) {
+    .podhale{
+        padding: 2px 42px
+    }
+    }
+
+    @media only screen and (max-width: 750px) {
+          :root{
+               --font-size:19px
+     
+          }
+          .flex{
+            display: block;
+          }
+
+          .kontakt{
+            float: left;
+            margin-left: 20px;
+          }
+
+          .profil{
+            float: right;
+            margin-right: 20px;
+          }
+
+          .form{
+            text-align: center;
+            clear: both;
+          }
+    }
+
+     @media only screen and (max-width: 680px) {
+          
+        .podhale{
+            padding: 2px 37px;
+        }
+     
+        nav ul{
+               padding: 6px 0 0 0;
+        }
+     
+        .ryby img {
+            display: none;
+        }
+
+        li:not(nav li){
+            padding: 0;
+        }
+
+        footer p{
+            font-size: 16px;
+        }
+
+        ul:not(nav ul){
+            text-align: center;
+          }
+     }
+
+     @media only screen and (max-width: 480px) {
+          :root{
+               --font-size:22px;
+          }
+
+          .img img {
+            width: 88vw;
+        }
+
+        .iframe{
+            margin: 10px;
+        }
+
+          ul:not(nav ul){
+            display: block;
+            text-align: center;
+          }
+        
+          .kontakt{
+            text-align: center;
+            float: none;
+            margin-left: 0;
+          }
+
+          .profil{
+            display: block;
+            width: 100vw;
+            margin: 0px;
+            float: none;
+            text-align: center;
+          }
+
+          .profil img{
+            width: 70vw;
+          }
+
+          .form{
+            text-align: center;
+            clear: both;
+          }
+        }

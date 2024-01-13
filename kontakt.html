@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="styl.css">
+    <link rel="shortcut icon" href="img/icon.png">
+    <script>
+        document.addEventListener("DOMContentLoaded", ()=>{
+            document.getElementById('btn').addEventListener("click",()=>{
+            let response = document.getElementById('response');
+            let temat = document.getElementById('temat').value;
+            let tresc = document.getElementById('tresc').value;
+            if (temat.trim() == "") response.innerText = "Temat nie może być pusty!\n";
+            if (tresc.trim() == "") response.innerText += "Treść nie może być pusta!\n";
+
+            if (!(temat.trim() == "" && tresc.trim() == "")) {
+                response.innerText = "Wiadomość wysłana."
+            }
+        });
+        })
+    </script>
+</head>
+<body>
+<header><img src="img/sum.jpg" alt="sum afrykański"></header>     
+            <nav>
+                <ul>
+                    <li><a href="index.html" target="_blank">Główna</a></li>
+                    <li><a href="miejscowosc.html" target="_blank">Miejscowość</a></li>
+                    <li><a href="kontakt.html" target="_blank">Kontakt</a></li>
+                </ul>
+            </nav>
+        <div class="flex">
+    <div class="kontakt">
+        <p>Telefon kontaktowy: <a href="tel:+48 000 000 000">+48000000000</a></p>
+        <p>Adres e-mail: zzych22@nowotarski.edu.pl</p>
+        <p>
+            <pre>
+Polska
+Nowy Targ
+34-400
+ul. Przemysłowa 24a
+            </pre>
+        </p>
+    </div>
+    <div class="profil">
+        <img src="img/315316891.jpg" alt="Moje zdjęcie ">
+    </div>
+    <div class="form">
+        <p id="response"></p>
+        <form action="">
+            <label for="temat">Temat:</label>
+            <br>
+            <input type="text" name="temat" id="temat" required>
+            <br>
+            <label for="tresc">Treść:</label>
+            <br>
+            <textarea name="tresc" id="tresc" cols="30" rows="10" required></textarea>
+            <br>
+            <label for="mail">Adres e-mail:</label>
+            <br>
+            <input type="email" name="mail" id="mail" required>
+            <button id="btn" type="submit">Prześlij</button>
+        </form>
+    </div>
+</div>
+    <footer>
+        <p id="czas"></p>
+        <script>
+let teraz = new Date();
+let rok = teraz.getFullYear();
+let miesiac = teraz.getMonth() + 1; 
+let dzienMiesiac = teraz.getDate();
+let godzina = teraz.getHours();
+let minuty = teraz.getMinutes();
+
+if (godzina < 10) godzina = '0' + godzina;
+if (minuty < 10) minuty = '0' + minuty;
+if (dzienMiesiac < 10) dzienMiesiac = '0' + dzienMiesiac;
+if (miesiac < 10) miesiac = '0' + miesiac;
+
+let data = `${dzienMiesiac}-${miesiac}-${rok}`;
+let godz = `${godzina}:${minuty}`;
+document.getElementById("czas").innerHTML = godz +"  "+data;
+
+        setInterval(()=>{
+            let teraz = new Date();
+let rok = teraz.getFullYear();
+let miesiac = teraz.getMonth() + 1; 
+let dzienMiesiac = teraz.getDate();
+let godzina = teraz.getHours();
+let minuty = teraz.getMinutes();
+
+if (godzina < 10) godzina = '0' + godzina;
+if (minuty < 10) minuty = '0' + minuty;
+if (dzienMiesiac < 10) dzienMiesiac = '0' + dzienMiesiac;
+if (miesiac < 10) miesiac = '0' + miesiac;
+
+let data = `${dzienMiesiac}-${miesiac}-${rok}`;
+let godz = `${godzina}:${minuty}`;
+document.getElementById("czas").innerHTML = godz +"  "+data;
+        }, 1000);
+        </script>
+        <p>zzych22@zs1.nowotarski.edu.pl</p>
+    </footer>
+</body>
+</html>
